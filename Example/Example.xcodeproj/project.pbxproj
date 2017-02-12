@@ -416,6 +416,7 @@
 				A4B688661E4FCA8E0037E5A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

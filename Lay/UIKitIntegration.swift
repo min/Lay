@@ -31,7 +31,7 @@ extension CGSize {
 }
 
 extension Array where Element: Sizable {
-    public func lay_calculate(for width: CGFloat, preferredHeight: CGFloat = UIScreen.main.bounds.height / 4) -> [CGSize] {
+    public func lay_justify(for width: CGFloat, preferredHeight: CGFloat = UIScreen.main.bounds.height / 4) -> [CGSize] {
 
         let summedWidth: CGFloat = reduce(0, { $0 + ($1.size.lay_aspectRatio * preferredHeight) })
 

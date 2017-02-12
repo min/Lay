@@ -61,7 +61,7 @@ class ViewController: UIViewController {
 
         view.addSubview(collectionView)
 
-        sizes = items.lay_calculate(for: view.bounds.size.width, preferredHeight: 180)
+        sizes = items.lay_justify(for: view.bounds.size.width, preferredHeight: 180)
 
         print(sizes)
     }
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
 
-        sizes = items.lay_calculate(for: size.width, preferredHeight: 180)
+        sizes = items.lay_justify(for: size.width, preferredHeight: 180)
 
         collectionView.collectionViewLayout.invalidateLayout()
     }
