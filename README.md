@@ -1,15 +1,18 @@
-# Lay
-A library that computes a perfectly justified collection of elements for any given width while maintaining the source aspect ratio. This library aims to mimic the layout implementations found in:
+<p align="center"><img src="docs/Logo@2x.jpg" width="300"></p>
+
+Computes a perfectly justified collection of elements for any given width while maintaining the source aspect ratio. This library aims to mimic the layout implementations found in:
 - [Flickr](https://www.flickr.com/search/?text=san%20francisco)
 - [Chromatic](http://www.chromatic.io)
 - Google photos
 
-At it's core, Lay applies [linear partitioning algorithm](https://www8.cs.umu.se/kurser/TDBA77/VT06/algorithms/BOOK/BOOK2/NODE45.HTM) against the aspect ratios of each size element.
+At it's core, Lay applies the [linear partitioning algorithm](https://www8.cs.umu.se/kurser/TDBA77/VT06/algorithms/BOOK/BOOK2/NODE45.HTM) against the aspect ratios of each size element to compute the balanced layout.
 
 ## Features
 - No cropping, source size aspect ratios will be maintained.
 - Flexible, works with any array of elements that conform to the `Sizable` protocol.
 - Swift 3.0
+
+Checkout out the Example app to see how this can be integrated with `UICollectionViews`.
 
 <img src="docs/Screenshot@2x.jpg" width="375">
 
@@ -45,8 +48,6 @@ let sizes: [CGSize] = aspectRatios.lay_justify(for: view.bounds.size.width)
       (225.0, 180.0)
     ]
 ```
-
-Checkout out the Example app to see how this can be integrated with `UICollectionViews`.
 
 ## TODO
 
