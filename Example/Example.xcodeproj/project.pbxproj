@@ -14,6 +14,7 @@
 		A4B688601E4FCA8E0037E5A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4B6885E1E4FCA8E0037E5A7 /* LaunchScreen.storyboard */; };
 		A4B6888C1E4FCB190037E5A7 /* Lay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B688871E4FCB0E0037E5A7 /* Lay.framework */; };
 		A4B6888D1E4FCB190037E5A7 /* Lay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4B688871E4FCB0E0037E5A7 /* Lay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4B688921E4FEFC20037E5A7 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B688911E4FEFC20037E5A7 /* CollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		A4B6885F1E4FCA8E0037E5A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4B688611E4FCA8E0037E5A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4B688801E4FCB0E0037E5A7 /* Lay.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lay.xcodeproj; path = ../Lay.xcodeproj; sourceTree = "<group>"; };
+		A4B688911E4FEFC20037E5A7 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +107,12 @@
 			isa = PBXGroup;
 			children = (
 				A4B688551E4FCA8E0037E5A7 /* AppDelegate.swift */,
-				A4B688571E4FCA8E0037E5A7 /* ViewController.swift */,
-				A4B688591E4FCA8E0037E5A7 /* Main.storyboard */,
 				A4B6885C1E4FCA8E0037E5A7 /* Assets.xcassets */,
-				A4B6885E1E4FCA8E0037E5A7 /* LaunchScreen.storyboard */,
+				A4B688911E4FEFC20037E5A7 /* CollectionViewCell.swift */,
 				A4B688611E4FCA8E0037E5A7 /* Info.plist */,
+				A4B6885E1E4FCA8E0037E5A7 /* LaunchScreen.storyboard */,
+				A4B688591E4FCA8E0037E5A7 /* Main.storyboard */,
+				A4B688571E4FCA8E0037E5A7 /* ViewController.swift */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			files = (
 				A4B688581E4FCA8E0037E5A7 /* ViewController.swift in Sources */,
 				A4B688561E4FCA8E0037E5A7 /* AppDelegate.swift in Sources */,
+				A4B688921E4FEFC20037E5A7 /* CollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

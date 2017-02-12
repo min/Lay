@@ -33,13 +33,13 @@ class ViewController: UIViewController {
     ]
 
     let items: [Item] = [
-        Item(size: CGSize(width: 100, height: 100)),
-        Item(size: CGSize(width: 80, height: 120)),
-        Item(size: CGSize(width: 100, height: 100)),
-        Item(size: CGSize(width: 200, height: 200)),
-        Item(size: CGSize(width: 80, height: 100)),
-        Item(size: CGSize(width: 100, height: 120)),
-        Item(size: CGSize(width: 100, height: 80))
+        Item(size: .init(width: 100, height: 100)),
+        Item(size: .init(width: 80, height: 120)),
+        Item(size: .init(width: 100, height: 100)),
+        Item(size: .init(width: 200, height: 200)),
+        Item(size: .init(width: 80, height: 100)),
+        Item(size: .init(width: 100, height: 120)),
+        Item(size: .init(width: 100, height: 80))
     ]
 
     var sizes: [CGSize] = []
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
 
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         collectionView.frame = view.bounds
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.register(CollectionViewCell.self, forCellWithReuseIdentifier: CollectionViewCell.reuseIdentifier)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.alwaysBounceVertical = true
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
 
         view.addSubview(collectionView)
 
-        sizes = items.lay_calculateSizes(for: view.bounds.size.width, preferredHeight: 180)
+        sizes = items.lay_calculate(for: view.bounds.size.width, preferredHeight: 180)
 
         print(sizes)
     }
@@ -83,7 +83,7 @@ class ViewController: UIViewController {
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
 
-        sizes = items.lay_calculateSizes(for: size.width, preferredHeight: 180)
+        sizes = items.lay_calculate(for: size.width, preferredHeight: 180)
 
         collectionView.collectionViewLayout.invalidateLayout()
     }
@@ -95,11 +95,13 @@ extension ViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseIdentifier, for: indexPath)
 
         cell.contentView.backgroundColor = colors[indexPath.item % colors.count]
-        cell.contentView.layer.borderColor = UIColor.black.cgColor
-        cell.contentView.layer.borderWidth = 1 / UIScreen.main.scale
+
+        let size: CGSize = sizes[indexPath.item]
+
+        (cell as? CollectionViewCell)?.titleLabel.text = "\(Int(size.width))x\(Int(size.height))"
 
         return cell
     }
