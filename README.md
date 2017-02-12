@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/Logo@2x.jpg" width="300"></p>
+<p align="center"><img src="docs/Logo@2x.jpg" width="400"></p>
 
 Computes a perfectly justified collection of elements for any given width while maintaining the source aspect ratio. This library aims to mimic the layout implementations found in:
 - [Flickr](https://www.flickr.com/search/?text=san%20francisco)
