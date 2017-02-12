@@ -1,15 +1,20 @@
 # Lay
-A library that computes a perfectly justified collection of elements for any given width while maintaining the source aspect ratio.
+A library that computes a perfectly justified collection of elements for any given width while maintaining the source aspect ratio. This library aims to mimic the layout implementations found in:
+- [Flickr](https://www.flickr.com/search/?text=san%20francisco)
+- [Chromatic](http://www.chromatic.io)
+- Google photos
 
 At it's core, Lay applies [linear partitioning algorithm](https://www8.cs.umu.se/kurser/TDBA77/VT06/algorithms/BOOK/BOOK2/NODE45.HTM) against the aspect ratios of each size element.
 
 ## Features
 - No cropping, source size aspect ratios will be maintained.
 - Flexible, works with any array of elements that conform to the `Sizable` protocol.
+- Swift 3.0
+
+<img src="docs/Screenshot@2x.jpg" width="375">
 
 This project is heavily inspired by [this article](https://medium.com/@jtreitz/the-algorithm-for-a-perfectly-balanced-photo-gallery-914c94a5d8af#.ac11ixwdn) written by [Johannes Treitz](https://medium.com/@jtreitz).
 
-<img src="docs/Screenshot@2x.jpg" width="375">
 
 ## Usage
 
